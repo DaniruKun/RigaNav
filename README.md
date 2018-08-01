@@ -7,4 +7,4 @@ The app displays the following information:
 * Fare for taking the bus
 * Fare of different taxi providers from the airport
 ## Test Cases
-![Test Cases](https://imgur.com/a/eXjjqGH.png)
+![Test Cases](https://i.imgur.com/RiQ3ecf.png)
