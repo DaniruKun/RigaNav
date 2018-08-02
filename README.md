@@ -47,5 +47,12 @@ To account for weekends, as well as Latvian holidays, a local file /main/assets/
 `1 1 2017`
 
 A **BufferedReader** object is used to read files only once and parse the data into **ArrayList** structures. 
+```java
+List<Integer> days = new ArrayList<>();
+            List<Integer> months = new ArrayList<>();
+            List<Integer> years = new ArrayList<>();
+            BufferedReader holidayRead = new BufferedReader(new InputStreamReader(getAssets().open("latviaHolidays.txt")));
+            
+```
 ## Test Cases
 ![Test Cases](https://i.imgur.com/RiQ3ecf.png)
