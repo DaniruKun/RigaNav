@@ -15,14 +15,33 @@ The app displays the following information:
 ## How it works
 ### Display
 To display data on the main screen, a **TableLayout** object is used, which then displays other objects such as **TextView**s.
+```java
+TableLayout myTable = (TableLayout)findViewById(R.id.TableLayout1);
+        myTable.setStretchAllColumns(true);
+```
+By using child elements such as **Rows** and **Columns**, new elements such as **TextViews** can be added if needed without interfering with the existing layout properties.
+```java
+TableRow busRow = new TableRow(this);
+        myTable.addView(busRow);
+        busRow.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
 
-By using child elements such as **Rows** and **Columns**, new elements can be added if needed without interfering with the existing layout properties.
+        TextView busText = new TextView(this);
+        busText.setText("Bus No 22");
+        busText.setTextSize(24);
+        busRow.addView(busText);
 
+        TextView leavesInText = new TextView(this);
+        leavesInText.setText("Leaves in");
+        leavesInText.setTextSize(24);
+        busRow.addView(leavesInText);
+```
 A child element of **TableLayout** - **TableRow** is used and added to the screen using the **addView()** method.
 
 ### Time
 To find out the local time, the app uses the **Calendar** object and the **get()** method to write the object's properties to corresponding variables of type **Int**.
-
+```java
+Calendar c = GregorianCalendar.getInstance();
+```
 To account for weekends, as well as Latvian holidays, a local file /main/assets/atviaHolidays.txt directory is read with holiday dates written in the following format: **"DD MM YYYY"** as strings, with each entry on its own separate line.
 
 `1 1 2017`
