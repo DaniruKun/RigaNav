@@ -23,5 +23,10 @@ A child element of **TableLayout** - **TableRow** is used and added to the scree
 ### Time
 To find out the local time, the app uses the **Calendar** object and the **get()** method to write the object's properties to corresponding variables of type **Int**.
 
+To account for weekends, as well as Latvian holidays, a local file /main/assets/atviaHolidays.txt directory is read with holiday dates written in the following format: **"DD MM YYYY"** as strings, with each entry on its own separate line.
+
+`1 1 2017`
+
+A **BufferedReader** object is used to read files only once and parse the data into **ArrayList** structures. 
 ## Test Cases
 ![Test Cases](https://i.imgur.com/RiQ3ecf.png)
